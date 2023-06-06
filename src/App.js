@@ -1,6 +1,5 @@
-import logo from './logo.svg'
 import { useState } from 'react'
-import Square from './Square'
+import Square from './components/Square'
 import './App.css'
 
 function App () {
@@ -23,7 +22,7 @@ function App () {
       [6, 7, 8],
       [2, 4, 6]
     ]
-    let answer = 'Who will win'
+    let answer = 'Who will win?'
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i]
       if (arr[a] && arr[b] && arr[c]) {
@@ -51,11 +50,12 @@ function App () {
             />
           )
         })}
-        <span>{calculateWinner(squares)}</span>
+        <span className="span">{calculateWinner(squares)}</span>
       </div>
     </div>
   )
 }
 
 export default App
+
 

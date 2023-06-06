@@ -1,4 +1,6 @@
 import React from 'react'
+import xlogo from '../components/xlogo.png'
+import '../components/Square.css'
 
 const Square = ({ ...props }) => {
   console.log('player prop', props.player)
@@ -23,10 +25,11 @@ const Square = ({ ...props }) => {
       {props.squareValue === 'O' ? (
         <img src="https://cdn.discordapp.com/attachments/830137099042816080/984895322184634448/devcircle_1.png" />
       ) : props.squareValue === 'X' ? (
-        'X'
+        <img src={xlogo} />
       ) : null}
     </div>
   )
 }
 
 export default Square
+
